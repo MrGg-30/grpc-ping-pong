@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package org.example.stubs.ping_pong;
+
+option java_package = "org.example.stubs.ping_pong";
+option java_multiple_files = true;
+
+service PingPongService {
+  rpc pingPong(PingPongRequest) returns (PingPongResponse);
+}
+
+message PingPongRequest {
+  string message = 1;
+}
+
+message PingPongResponse {
+  string message = 1;
+}
